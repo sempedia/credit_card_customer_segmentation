@@ -20,17 +20,23 @@ The project analyzes various customer attributes such as spending behavior, cred
 curl -sSL https://install.python-poetry.org | python3 -
 ```
 
-2. Install dependencies:
+2. Create a new virtual environment and install dependencies:
 
 ```bash
+poetry env use python3
 poetry install
 ```
 
-3. Activate the virtual environment:
+3. Run Python scripts or commands within the Poetry environment:
 
 ```bash
-source .venv/bin/activate
+poetry run python your_script.py
+
+# Or run Jupyter notebook
+poetry run jupyter notebook
 ```
+
+Note: Instead of activating the virtual environment directly, we use `poetry run` which is the recommended approach as it ensures all dependencies are properly managed by Poetry.
 
 ## Dependencies
 
@@ -70,9 +76,9 @@ For a detailed understanding of the dataset features and their meanings, please 
 
 To run the analysis:
 
-1. Ensure you're in the virtual environment:
+1. Ensure all dependencies are installed:
 ```bash
-source .venv/bin/activate
+poetry install
 ```
 
 2. Launch Jupyter notebook:
