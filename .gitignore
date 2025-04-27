@@ -72,7 +72,7 @@ venv.bak/
 # Text files
 *.txt
 !requirements.txt
-!project_info.txt
+
 
 # Data files
 *.csv
